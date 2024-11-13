@@ -3,7 +3,7 @@ class Solution {
        
         int xor = 0;
         Arrays.sort(nums);
-        for(int i = 0 ; i < nums.length-1 ; i+=2){
+        for(int i = 0 ; i < nums.length-2 ; i+=2){
             if(nums[i] != nums[i+1]) return false;
         }
         return true;
