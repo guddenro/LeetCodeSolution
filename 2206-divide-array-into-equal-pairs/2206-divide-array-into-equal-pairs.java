@@ -3,12 +3,10 @@ class Solution {
        
         int xor = 0;
         Arrays.sort(nums);
-        for(int i = 0 ; i < nums.length-1 ; i++){
-            xor = nums[i]^nums[i+1];
+        for(int i = 0 ; i < nums.length-1 ; i+=2){
+            if(nums[i] != nums[i+1]) return false;
         }
-        
-        System.out.println(xor);
-        return (xor==0? true:false);
+        return true;
     }
 }
 
